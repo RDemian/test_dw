@@ -1,0 +1,37 @@
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: rem-calc(49) 0 rem-calc(41);
+    //box-shadow: 0 0 30px #ffeef0;
+    box-shadow: 0 0 30px #facdc1f3;//временно, не вижу цвет
+
+    &__title {
+        font-size: rem-calc(26);
+    }
+
+    &__swiper-container {
+        //margin: 0 auto;
+        width: rem-calc(220);
+    }    
+
+    &__swiper-button {
+        outline: 1px dotted red;
+    }
+
+    &__swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@include breakpoint(large) {
+
+    .comments {
+        &__swiper-container {
+            width: rem-calc(740);
+        }    
+    }
+    
+}

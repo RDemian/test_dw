@@ -1,0 +1,149 @@
+.regform {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 23px;
+
+    @include breakpoint(large) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        width: 724px;
+        padding: 36px 72px;
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        margin-bottom: 30px;
+        
+        @include breakpoint(large) {
+            width: 45%;
+        }
+
+        &_agree,
+        &_submit,
+        &_annotation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include breakpoint(large) {
+                flex-direction: row;
+                justify-content: space-between;
+                
+                width: 100%;
+            }
+        }
+
+        &_upload {
+            @include breakpoint(large) {
+                position: absolute;
+                top: 194px;
+                width: 276px;
+            }
+        }
+    }
+
+    &__input {
+        padding: 12px;
+        border: none;
+        box-shadow: none;
+        border-bottom: 1px solid black;
+
+        font-family: inherit;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: bold;
+    }
+
+    &__label {
+        font-size: 14px;
+        line-height: 20px;
+
+        &_none {
+            display: none;    
+        }
+
+        &_agree {
+            position: relative;
+            padding-left: 40px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                display: block;
+                width: 25px;
+                height: 25px;
+                border: 1px solid black;
+                border-radius: 4px;
+            }    
+        }
+
+        &_upload {
+            padding: 25px 10px;
+
+            border: 1px dotted grey;
+            border-radius: 4px;
+
+            font-size: 14px;
+            line-height: 25px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            
+            background-image: url('../img/clip.svg');
+            background-position: 10px center;
+            background-repeat: no-repeat;
+            background-size: 30px 26px;
+        }
+    }
+
+    &__agree {
+        @include element-invisible;
+
+        &:checked + .regform__label_agree {
+            &::before {
+                content: '\2714';
+                font-size: 20px;
+                text-align: center;
+            } 
+        }
+    }
+
+    &__msg {
+        height: 150px;
+    }
+
+    &__upload-file {
+        display: none;
+    }
+
+    &__submit {
+        width: 100%;
+        padding: 25px 10px;
+
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+
+        background-color: #ff8091;
+    }
+
+    &__annotation-item {
+        font-size: 12px;
+        line-height: 24px;
+        color: #7e7e7e;
+    }
+}
+
+
+

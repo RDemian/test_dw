@@ -1,0 +1,22 @@
+<div class="comments">
+    <h2 class="comments__title">Отзывы</h2>
+    <!-- Slider main container -->
+    <div class="comments__swiper-container swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="comments__swiper-wrapper swiper-wrapper">
+            <!-- Slides -->
+            {{#each dta.comments}}
+            <div class="comments__swiper-slide swiper-slide">
+                {{> one-comment name=name img-src=img-src}}
+            </div>
+            {{/each}}
+        </div>
+        <!-- If we need pagination -->
+        <!--<div class="comments__swiper-pagination"></div>-->
+
+        <!-- If we need navigation buttons -->
+        <div class="comments__swiper-button comments__swiper-button_prev swiper-button-prev"></div>
+        <div class="comments__swiper-button comments__swiper-button_next swiper-button-next"></div>
+
+    </div>
+</div>

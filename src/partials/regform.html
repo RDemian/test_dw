@@ -1,0 +1,33 @@
+<form class="regform" id="regform" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+    <fieldset class="regform__item">
+        <input type="text" id="regform-name" class="regform__input regform__name" name="name" placeholder="Ваше имя">
+        <label for="regform-name" class="regform__label regform__label_none">Имя</label>
+    </fieldset>
+    <fieldset class="regform__item">
+        <input type="tel" id="regform-phone" class="regform__input regform__phone" name="phone" placeholder="Ваш телефон *" required>
+        <label for="regform-phone" class="regform__label regform__label_none">Телефон</label>
+    </fieldset>
+    <fieldset class="regform__item">
+        <input type="text" id="regform-mail" class="regform__input regform__mail" name="mail" placeholder="Ваш e-mail *" required>
+        <label for="regform-mail" class="regform__label regform__label_none">e-mail</label>
+    </fieldset>
+    <fieldset class="regform__item">
+        <textarea class="regform__input regform__msg" name="message" placeholder="Сообщение" maxlength="140"></textarea>
+        <label for="regform-name" class="regform__label regform__label_none">Сообщение</label>
+    </fieldset>
+    <fieldset class="regform__item regform__item_agree">
+        <input type="checkbox" id="regform-agree" class="regform__agree" name="regform-agree" required>
+        <label for="regform-agree" class="regform__label regform__label_agree">Согласен на обработку персональных данных</label>
+    </fieldset>
+    <fieldset class="regform__item regform__item_upload">
+        <input type="file" id="upload-file" class="regform__input regform__upload-file" name="filename">
+        <label for="upload-file" class="regform__label regform__label_upload">Прикрепить файл</label>
+    </fieldset>
+    <fieldset class="regform__item regform__item_submit">
+        <button type="submit" class="btn regform__submit ">Отправить</button>
+    </fieldset>
+    <div class="regform__item regform__item_annotation">
+        <span class="regform__annotation-item">* обязательные для заполнения</span>
+        <span class="regform__annotation-item">Макс размер файла 10 Мб</span>
+    </div>
+</form>
