@@ -1,19 +1,19 @@
-<form class="regform" id="regform" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+<form class="regform JQValidation" id="regform" action="" method="post" enctype="multipart/form-data" autocomplete="off">
     <fieldset class="regform__item">
-        <input type="text" id="regform-name" class="regform__input regform__name" name="name" placeholder="Ваше имя">
-        <label for="regform-name" class="regform__label regform__label_none">Имя</label>
+        <input type="text" id="regformName" class="regform__input regform__name js-field" name="name">
+        <label for="regform-name" class="regform__label regform__label_none js-label">Ваше имя</label>
     </fieldset>
     <fieldset class="regform__item">
-        <input type="tel" id="regform-phone" class="regform__input regform__phone" name="phone" placeholder="Ваш телефон *" required>
-        <label for="regform-phone" class="regform__label regform__label_none">Телефон</label>
+        <input type="tel" id="regform-phone" class="regform__input regform__phone js-field" name="phone" required>
+        <label for="regform-phone" class="regform__label regform__label_required js-label">Ваш телефон</label>
     </fieldset>
     <fieldset class="regform__item">
-        <input type="text" id="regform-mail" class="regform__input regform__mail" name="mail" placeholder="Ваш e-mail *" required>
-        <label for="regform-mail" class="regform__label regform__label_none">e-mail</label>
+        <input type="text" id="regform-email" class="regform__input regform__email js-field" name="email" required>
+        <label for="regform-mail" class="regform__label regform__label_required js-label">Ваш e-mail</label>
     </fieldset>
     <fieldset class="regform__item">
-        <textarea class="regform__input regform__msg" name="message" placeholder="Сообщение" maxlength="140"></textarea>
-        <label for="regform-name" class="regform__label regform__label_none">Сообщение</label>
+        <textarea class="regform__input regform__msg js-field" name="message" maxlength="140"></textarea>
+        <label for="regform-name" class="regform__label regform__label_none js-label">Сообщение</label>
     </fieldset>
     <fieldset class="regform__item regform__item_agree">
         <input type="checkbox" id="regform-agree" class="regform__agree" name="regform-agree" required>

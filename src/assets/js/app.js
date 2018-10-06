@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
 
-
 window.$ = $;
 
 //import Foundation from 'foundation-sites';
@@ -95,31 +94,28 @@ $('[data-app-dashboard-toggle-shrink]').on('click', function(e) {
   e.preventDefault();
   $(this).parents('.app-dashboard').toggleClass('shrink-medium').toggleClass('shrink-large');
 });
-
+// Added plagin
 // -----------------------------------------------------------
-// slider swiper
-import Swiper from 'swiper';
+import './components/swiper-settings';
+//import './components/form-validation';
+import 'jquery-validation';
+import form from './components/form-valid';
+import main from './main';
 
-var swiper = new Swiper('.comments__swiper-container', {
-  direction: "horizontal",
-  breakpointsInverse: true,
-  loop: !0,
-  slidesPerView: 1,
-  spaceBetween: 0,
-  navigation: {
-    nextEl: '.comments__swiper-button_next',
-    prevEl: '.comments__swiper-button_prev',
-  },
-  pagination: {
-    el: '.comments__swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    // when window width is <= 320px
-    1024: {
-      loop: !0,
-      slidesPerView: 3,
-      spaceBetween: 0,
-    }
-  }
+$(() => {
+    form.init();
+    main.init();
 });
+/*
+$(document).ready(function () {
+  $(".js-field").on("focusin", function () {
+          $(this).next(".js-label").addClass("regform__label_active")
+      }),
+      $(".js-field").on("focusout", function () {
+          this.value || $(this).next(".js-label").removeClass("regform__label_active")
+      }),
+      $("label").click(function () {
+          $(this).prev().focus()
+      })
+})
+*/
