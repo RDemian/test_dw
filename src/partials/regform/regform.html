@@ -1,33 +1,33 @@
 <form class="regform JQValidation" id="regform" action="" method="post" enctype="multipart/form-data" autocomplete="off">
-    <fieldset class="regform__item">
-        <input type="text" id="regformName" class="regform__input regform__name js-field" name="name">
+    <fieldset class="regform__item regform__item_name">
+        <input type="text" id="regformName" class="regform__input regform__input_name js-field" name="name">
         <label for="regform-name" class="regform__label regform__label_none js-label">Ваше имя</label>
     </fieldset>
-    <fieldset class="regform__item">
-        <input type="tel" id="regform-phone" class="regform__input regform__phone js-field" name="phone" required>
+    <fieldset class="regform__item regform__item_phone">
+        <input type="tel" id="regform-phone" class="regform__input regform__input_phone js-field" name="phone" required>
         <label for="regform-phone" class="regform__label regform__label_required js-label">Ваш телефон</label>
     </fieldset>
-    <fieldset class="regform__item">
-        <input type="text" id="regform-email" class="regform__input regform__email js-field" name="email" required>
-        <label for="regform-mail" class="regform__label regform__label_required js-label">Ваш e-mail</label>
+    <fieldset class="regform__item regform__item_email">
+        <input type="text" id="regform-email" class="regform__input regform__input_email js-field" name="email" required>
+        <label for="regform-email" class="regform__label regform__label_required js-label">Ваш email</label>
     </fieldset>
-    <fieldset class="regform__item">
-        <textarea class="regform__input regform__msg js-field" name="message" maxlength="140"></textarea>
+    <fieldset class="regform__item regform__item_msg">
+        <textarea class="regform__input regform__input_msg js-field" name="message" maxlength="140"></textarea>
         <label for="regform-name" class="regform__label regform__label_none js-label">Сообщение</label>
     </fieldset>
     <fieldset class="regform__item regform__item_agree">
-        <input type="checkbox" id="regform-agree" class="regform__agree" name="regform-agree" required>
+        <input type="checkbox" id="regform-agree" class="regform__agree" name="regform_agree" required>
         <label for="regform-agree" class="regform__label regform__label_agree">Согласен на обработку персональных данных</label>
     </fieldset>
     <fieldset class="regform__item regform__item_upload">
-        <input type="file" id="upload-file" class="regform__input regform__upload-file" name="filename">
+        <input type="file" id="upload-file" class="regform__upload" name="filename">
         <label for="upload-file" class="regform__label regform__label_upload">Прикрепить файл</label>
     </fieldset>
     <fieldset class="regform__item regform__item_submit">
         <button type="submit" class="btn regform__submit ">Отправить</button>
     </fieldset>
     <div class="regform__item regform__item_annotation">
-        <span class="regform__annotation-item">* обязательные для заполнения</span>
-        <span class="regform__annotation-item">Макс размер файла 10 Мб</span>
+        <div class="regform__annotation">* обязательные для заполнения</div>
+        <div class="regform__annotation">Макс размер файла 10 Мб</div>
     </div>
 </form>

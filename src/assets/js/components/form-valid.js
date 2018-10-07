@@ -12,6 +12,8 @@ const init = () => {
         e.preventDefault();
     });
 
+    //$('#regform-phone').mask("+7 (000) 000-00-00");
+    /*
     function openPopup() {
         $popupWrap.css('display', 'block');
         $popup.css('display', 'flex');
@@ -26,7 +28,7 @@ const init = () => {
             $popup.css('display', 'none');
         });
     };
-
+    */
     $.validator.addMethod("passwordText", function (value, element) {
         return this.optional(element) || /^(?=.*\d)(?=.*[a-z]).*$/.test(value);
     }, "Только цифры и буквы");
@@ -59,7 +61,11 @@ const init = () => {
         invalidHandler: function (event, validator) {
             console.warn('Форма заполнена с ошибками!');
         },
-
+        errorPlacement: function(error, element) {
+            //errorPlacement: (error, element) => {    
+                //$error.appendTo( $element.parent() );
+                error.appendTo(element.parent());
+              },
         //Обработчик размеения элемента с сообщением
         //Переносим сообщение в нужное место
         /*
@@ -98,9 +104,8 @@ const init = () => {
         },
 
         messages: {
-            username: {
-                required: 'Обязательное поле',
-                minlength: 'Короче 4 символов',
+            regform_agree: {
+                required: 'требуется согласие',
             },
             password: {
                 required: 'Обязательное поле',
