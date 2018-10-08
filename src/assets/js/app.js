@@ -3,10 +3,10 @@ import whatInput from 'what-input';
 
 window.$ = $;
 
-//import Foundation from 'foundation-sites';
+import Foundation from 'foundation-sites';
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
-import './lib/foundation-explicit-pieces';
+//import './lib/foundation-explicit-pieces';
 
 import 'tablesaw/dist/tablesaw.jquery';
 import libs from './lib/dependancies';
@@ -96,13 +96,43 @@ $('[data-app-dashboard-toggle-shrink]').on('click', function(e) {
 });
 // Added plagin
 // -----------------------------------------------------------
-import './components/swiper-settings';
+//import './components/swiper-settings';
+
 import 'jquery-validation';
 import 'jquery-mask-plugin';
+import Swiper2 from 'swiper';
+
 import form from './components/form-valid';
 import main from './main';
+//import swiperSet from './components/swiper-settings';
 
 $(() => {
     form.init();
     main.init();
+    //swiperSet.init();
+});
+var swiper2 = new Swiper2('.comments__swiper-container', {});
+
+var swiper2 = new Swiper2('.comments__swiper-container', {
+  direction: "horizontal",
+  breakpointsInverse: true,
+  loop: !0,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: {
+      nextEl: '.comments__swiper-button_next',
+      prevEl: '.comments__swiper-button_prev',
+  },
+  pagination: {
+      el: '.comments__swiper-pagination',
+      clickable: true,
+  },
+  breakpoints: {
+      // when window width is <= 320px
+      1024: {
+          loop: !0,
+          slidesPerView: 3,
+          spaceBetween: 0,
+      }
+  }
 });

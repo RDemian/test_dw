@@ -5,8 +5,8 @@
 @import 'motion-ui';
 
 @include foundation-global-styles;
-//@include foundation-grid;
-@include foundation-flex-grid;
+@include foundation-grid;
+// @include foundation-flex-grid;
 //
 @include foundation-xy-grid-classes;
 @include foundation-typography;
@@ -74,13 +74,13 @@
 @import 'global/layout';
 
 // custom components
-@import 'components/navigation/main-nav';
+//@import 'components/navigation/main-nav';
+//@import 'components/footer';
 
 @import 'components/regform/regform';
-
-@import 'components/footer';
 
 @import 'components/comments/comments.scss';
 @import 'components/comments/one-comment.scss';
 
-@import 'swiper/css/swiper';
+@import 'components/swiper/swiper';
+//@import 'swiper/css/swiper';

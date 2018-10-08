@@ -1,6 +1,8 @@
-import Swiper from 'swiper';
+import SwiperSlider2 from 'swiper';
 
-var swiper = new Swiper('.comments__swiper-container', {
+const init = () => {
+
+var swiper = new SwiperSlider2('.comments__swiper-container', {
     direction: "horizontal",
     breakpointsInverse: true,
     loop: !0,
@@ -23,3 +25,9 @@ var swiper = new Swiper('.comments__swiper-container', {
         }
     }
 });
+
+};
+
+export default {
+    init,
+};
