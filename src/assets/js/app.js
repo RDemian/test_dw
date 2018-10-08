@@ -98,6 +98,7 @@ $('[data-app-dashboard-toggle-shrink]').on('click', function(e) {
 // -----------------------------------------------------------
 import './components/swiper-settings';
 import 'jquery-validation';
+import 'jquery-mask-plugin';
 import form from './components/form-valid';
 import main from './main';
 

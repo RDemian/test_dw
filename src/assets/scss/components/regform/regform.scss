@@ -129,7 +129,8 @@
         &_upload {
             position: relative;
             padding: rem-calc(20) rem-calc(10);
-            width: 100%;
+            padding-left: rem-calc(60);
+            width: rem-calc(277);
 
             border: 1px dashed #000;
             border-radius: rem-calc(5);
@@ -137,9 +138,12 @@
             font-size: rem-calc(14);
             line-height: rem-calc(25);
             font-weight: bold;
-            text-align: center;
+            text-align: left;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
 
             background-image: url('../img/clip.svg');
             background-position: rem-calc(16) center;
@@ -180,7 +184,7 @@
 @include breakpoint(large) {
     .regform {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto rem-calc(49) auto rem-calc(28) auto rem-calc(38) auto rem-calc(44) auto rem-calc(28) auto;
         grid-column-gap: rem-calc(46);
         //grid-row-gap: rem-calc(46);

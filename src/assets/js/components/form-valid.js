@@ -12,7 +12,34 @@ const init = () => {
         e.preventDefault();
     });
 
-    //$('#regform-phone').mask("+7 (000) 000-00-00");
+    $('.js-upload').on("change", function(e) {
+        var label = $('.js-label-upload');
+        //console.log(e);
+        label.html(e.target.value);
+        /*
+        var currentUpload = $(this);
+        var label = currentUpload.prev()
+            , labelVal = label.html()
+            , errorLabelSize = currentUpload.parent().next()
+            , errorLabelFormat = currentUpload.parent().next().next();
+        if (this.files[0].size > 10485760)
+            errorLabelSize.show(),
+            this.value = "";
+        else if ("image/jpeg" !== this.files[0].type && "image/png" !== this.files[0].type)
+            errorLabelFormat.show(),
+            this.value = "";
+        else {
+            errorLabelSize.hide(),
+            errorLabelFormat.hide();
+            var fileName = "";
+            fileName = this.files && this.files.length > 1 ? (this.getAttribute("data-multiple-caption") || "").replace("{count}", this.files.length) : e.target.value.split("\\").pop(),
+            fileName ? label.html(fileName) : label.html(labelVal)
+        }
+        */
+    })
+    
+    
+    $('#regform-phone').mask("+7 (000) 000-00-00");
     /*
     function openPopup() {
         $popupWrap.css('display', 'block');
@@ -98,7 +125,7 @@ const init = () => {
             },
             phone: {
                 required: true,
-                digits: true,
+                //digits: true,
                 minlength: 11,
             },
         },
